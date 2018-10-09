@@ -1,0 +1,61 @@
+<ngx-spinner></ngx-spinner>
+<div class="cover"></div>
+<div class="container">
+	<div class="row" style="padding-bottom: 1%; padding-top: 35px">
+		<div class="col-12">
+			<h1 class="section-head">Lil Wayne</h1>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-sm-12 col-md-8 col-lg-8" style="padding-bottom:7%">
+			<span class="description-color" style="font-size: 15px">
+				{{getArtistDescription()}}
+			</span>
+		</div>
+
+		<div class="col-sm-12 hide-md" style="padding-bottom: 7%">
+			<button type="button " class="btn btn-outline-danger listen-button" (click)="goToItunesProfile()">
+				View on
+				<strong>Apple Music</strong>
+				<i class="fa fa-location-arrow " style="padding-left: 3%"></i>
+			</button>
+		</div>
+
+		<div class="col-sm-12 col-md-4 col-lg-4">
+			<dl style=" border-bottom: 1px solid #ccc;">
+				<dt class="about-artist-details-label ">Origin</dt>
+				<dd class="description-color">New Orlans, LA</dd>
+				<dt class="about-artist-details-label ">Genre</dt>
+				<dd class="description-color">Hip-Hop/Rap</dd>
+				<dt class="about-artist-details-label ">Born</dt>
+				<dd class="description-color">Sep 27, 1982</dd>
+			</dl>
+		</div>
+	</div>
+
+	<app-collection [collections]="collections"></app-collection>
+
+	<div class="row">
+		<div class="col-12" style="padding-bottom: 7%; text-align: center">
+			<button type="button " class="btn btn-outline-danger listen-button" (click)="loadMoreCollections()">
+				See More
+			</button>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-12">
+			<h1 class="album-title separation-border-top" style="font-size: 22px; padding-top: 30px">Featured Artists</h1>
+		</div>
+	</div>
+	<div class="row" style="padding-top: 30px">
+		<div class="col-6 col-md-3 col-lg-2" *ngFor="let releated of releatedArtists">
+			<div class="feature-artist-artwork" [ngStyle]="{'background-image': 'url(' +artistService.getBiggerImage(releated?.artworkUrl100) +')'}"></div>
+			<dl style="text-align: center;padding-top: 15px">
+				<dt style="font-size: 15px; font-weight: normal">{{releated.artistName}}</dt>
+				<dd style="color:#8e8e93; font-size: 15px">Hip-Hop/Rap</dd>
+			</dl>
+		</div>
+	</div>
+</div>

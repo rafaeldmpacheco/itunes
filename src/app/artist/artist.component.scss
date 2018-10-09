@@ -1,0 +1,60 @@
+@media (min-width: 769px) {
+	.hide-sm {
+		display: block
+	}
+
+	.hide-md {
+		display: none
+	}
+
+	.feature-artist-artwork {
+		background-size: 100% 100%;
+		width: 150px;
+		height: 150px;
+		border-radius: 50%;
+	}
+}
+
+@media (max-width: 768px) {
+	.hide-sm {
+		display: none
+	}
+
+	.hide-md {
+		display: block
+	}
+
+	.feature-artist-artwork {
+		background-size: 100% 100%;
+		width: auto;
+		height: 150px;
+		border-radius: 50%;
+	}
+}
+
+.cover {
+	background-image: url("https://is2-ssl.mzstatic.com/image/thumb/Music/v4/f5/fa/c9/f5fac92c-4298-564d-29a5-568a609567fd/source/1920x800cc.jpg");
+	height: 200px;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-color: var(--color-primary);
+}
+
+.section-head {
+	font-size: 34px;
+	line-height: 1.20604;
+	font-weight: 700;
+	color: #111;
+	letter-spacing: 0.01em;
+}
+
+.about-artist-details-label {
+	color: #8e8e93;
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 13px;
+	letter-spacing: 0.007em;
+	padding-top: 2%;
+	border-top: 1px solid #ccc;
+}

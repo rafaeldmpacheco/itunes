@@ -1,0 +1,39 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~font-awesome/css/font-awesome.css";
+
+.listen-button {
+	color: #da0f47;
+	border-color: #da0f47;
+}
+
+.description-color {
+	color: #363636;
+}
+
+.album-title {
+	font-size: 20px;
+	line-height: 1.20604;
+	font-weight: 700;
+	color: #111;
+	letter-spacing: 0.01em;
+}
+
+body {
+	font-family: "SF Pro Text", "SF Pro Icons", "Apple WebExp Icons Custom",
+		"Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.separation-border-bottom {
+	border-bottom: 1px solid #ccc;
+}
+
+.separation-border-top {
+	border-top: 1px solid #ccc;
+}
+
+.track-artist {
+	color: #8e8e93;
+	font-size: 15px;
+	font-weight: 400;
+}

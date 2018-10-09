@@ -1,0 +1,23 @@
+.track-artwork {
+	background-size: 100% 100%;
+	width: 60px;
+	height: 60px;
+	border-radius: 6px;
+}
+
+.last-item {
+	border-bottom: none;
+	padding-bottom: 5%;
+}
+
+.align-center {
+	display: flex;
+    align-items: center;
+	justify-content: center;
+}
+
+@media (min-width: 992px){
+	.col-lg-2 {
+		max-width:12.666667%;
+	}
+}

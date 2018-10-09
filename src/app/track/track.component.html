@@ -1,0 +1,16 @@
+<ngx-spinner></ngx-spinner>
+<div class="row" style="padding-top: 2%" *ngFor="let track of tracks; let last = last" [class.last-item]="last" (click)="playTrack(track?.previewUrl, track?.trackId)">
+	<div class="col-3 col-md-3 col-lg-2">
+		<div class="track-artwork" *ngIf="!currentTrack(track?.trackId)" [ngStyle]="{'background-image': 'url(' + track?.artworkUrl100 +')'}"></div>
+		<round-progress *ngIf="currentTrack(track?.trackId)" [current]="currentTime" [max]="duration" [radius]="30" [stroke]="10"
+		 [clockwise]="true" color="#da0f47"></round-progress>
+	</div>
+	<div class="col-6 separation-border-bottom" [class.last-item]="last" style="padding-left: 0">
+		<span style="font-size: 15px">{{track?.trackCensoredName}}</span>
+		<br>
+		<span class="track-artist">{{track?.artistName}}</span>
+	</div>
+	<div class="col-3 separation-border-bottom align-center" style="max-width: 23%; padding-right: -5px" [class.last-item]="last">
+		<span class="track-artist">{{trackTime(track?.trackTimeMillis)}}</span>
+	</div>
+</div>

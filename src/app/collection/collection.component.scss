@@ -1,0 +1,66 @@
+@media (min-width: 769px) {
+	.album-artwork {
+		background-size: 100% 100%;
+		width: auto;
+		height: 230px;
+		border-radius: 6px;
+	}
+
+	.hide-sm {
+		display: block;
+	}
+
+	.hide-md {
+		display: none;
+	}
+
+	.listen-on {
+		padding-top: 3%;
+		padding-bottom: 4%
+	}
+
+	.title-space {
+		padding-left: 15px
+	}
+}
+
+@media (max-width: 768px) {
+	.album-artwork {
+		background-size: 100% 100%;
+		width: 114px;
+		height: 114px;
+		border-radius: 6px;
+	}
+
+	.hide-sm {
+		display: none
+	}
+
+	.hide-md {
+		display: block;
+	}
+
+	.listen-on {
+		padding-top: 11%;
+		padding-bottom: 2%
+	}
+
+	.title-space {
+		padding-left: 0
+	}
+}
+
+.album-title {
+	font-size: 20px;
+	line-height: 1.20604;
+	font-weight: 700;
+	color: #111;
+	letter-spacing: 0.01em;
+}
+
+.editor-notes {
+	font-weight: 600;
+	text-transform: uppercase;
+	font-size: 14px;
+	padding-bottom: 5px;
+}

@@ -1,0 +1,46 @@
+<div *ngFor="let collection of collections">
+  <div class="row" style="padding-top: 2%">
+
+    <div class="col-3 hide-sm">
+      <div class="album-artwork" [ngStyle]="{'background-image': 'url(' +artistService.getBiggerImage(collection?.artworkUrl100) +')'}"></div>
+      <div class="track-artist hide-sm" style="padding-top:4%">{{tracksCount}} Songs</div>
+
+      <div style="padding-top: 4%;padding-bottom: 5%">
+          <dl style=" border-top: 1px solid #ccc; padding-top: 5%;">
+            <dt class="editor-notes ">Editor's Notes</dt>
+            <dd class="description-color" style="font-size: 15px">Lil Wayne is one of hip-hop's most relentless MCs. He got
+              his start as only a teenager signed to Cash Money Records during the...</dd>
+          </dl>
+        </div>
+    </div>
+
+    <div class="col-sm-12 col-md-7 col-lg-8">
+      <div class="row">
+        <div class="col-5 hide-md">
+          <div class="album-artwork" [ngStyle]="{'background-image': 'url(' +collection?.artworkUrl100 +')'}"></div>
+        </div>
+
+        <div class="col-7 title-space">
+          <h1 class="album-title">{{collection?.collectionCensoredName}}</h1>
+        </div>
+      </div>
+
+      <div class="listen-on">
+        <button type="button" class="btn btn-outline-danger listen-button" (click)="collectionViewUrl(collection?.collectionViewUrl)">
+          Listen on <strong>Apple Music</strong>
+          <i class="fa fa-location-arrow" style="padding-left: 3%"></i>
+        </button>
+      </div>
+
+      <div class="hide-md" style="padding-top: 4%">
+        <dl style="border-bottom: 1px solid #ccc; border-top: 1px solid #ccc; padding-top: 5%;margin-bottom: 0">
+          <dt class="editor-notes ">Editor's Notes</dt>
+          <dd class="description-color" style="font-size: 15px; padding-bottom: 25px">Lil Wayne is one of hip-hop's most relentless MCs. He got
+            his start as only a teenager signed to Cash Money Records during the...</dd>
+        </dl>
+      </div>
+
+      <app-track [collectionId]="collection.collectionId" (tracksCount)="getTracksCount($event)"></app-track>
+    </div>
+  </div>
+</div>
